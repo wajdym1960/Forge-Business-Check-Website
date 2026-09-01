@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Check Whether a Company Appears on an OFAC Sanctions List</title>
+<meta name="description" content="A bounded guide to checking a company name against official OFAC sanctions data, reviewing possible matches, and understanding what a no-match result cannot prove." />
+<link rel="canonical" href="https://forgebusinesscheck.com/check-company-ofac-sanctions-list/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://forgebusinesscheck.com/check-company-ofac-sanctions-list/" />
+<meta property="og:title" content="How to Check Whether a Company Appears on an OFAC Sanctions List" />
+<meta property="og:description" content="Use official OFAC data carefully: a possible name match requires identity review, and no match is not a safety guarantee." />
+<style>
+:root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--paper:#f8fafc;--white:#fff;--accent:#087f72;--soft:#e9f7f4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 Arial,Helvetica,sans-serif}
+a{color:#075f57}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{background:rgba(248,250,252,.96);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;color:var(--ink);text-decoration:none}.nav span{color:var(--muted);font-size:14px}
+main{padding:64px 0 80px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:48px;align-items:start}
+.crumb,.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#536173}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-.045em;margin:18px 0 24px}
+.lead{font-size:22px;line-height:1.55;color:var(--muted);margin-bottom:36px}
+h2{font-size:30px;line-height:1.2;letter-spacing:-.025em;margin:54px 0 14px}
+h3{font-size:21px;margin:32px 0 8px}p,li{color:#344054}
+.notice{background:var(--soft);border:1px solid #bce7df;border-radius:16px;padding:22px 24px;margin:32px 0}
+.notice strong{display:block;color:#075f57;margin-bottom:4px}
+.steps{counter-reset:step;list-style:none;padding:0}.steps>li{counter-increment:step;margin:28px 0;padding-left:52px;position:relative}
+.steps>li:before{content:counter(step);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:800}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 12px 32px rgba(16,24,40,.06)}
+.side{position:sticky;top:24px}.side h2{font-size:20px;margin:0 0 10px}.side ul{padding-left:20px;margin:0 0 22px}
+.button{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:10px}
+.fine{font-size:13px;color:var(--muted);line-height:1.5}.sources li{margin:10px 0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+@media(max-width:840px){.article{grid-template-columns:1fr}.side{position:static;order:-1}main{padding-top:40px}.nav span{display:none}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Check Whether a Company Appears on an OFAC Sanctions List","description":"A bounded guide to checking a company name against official OFAC sanctions data and reviewing possible identity matches.","mainEntityOfPage":"https://forgebusinesscheck.com/check-company-ofac-sanctions-list/","publisher":{"@type":"Organization","name":"Forge Business Check","url":"https://forgebusinesscheck.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does an OFAC name match prove the company is sanctioned?","acceptedAnswer":{"@type":"Answer","text":"No. A possible name match requires review of aliases, addresses, identifiers, ownership information, and other context before it can be connected to the intended company."}},{"@type":"Question","name":"Does no OFAC name match prove the company is safe?","acceptedAnswer":{"@type":"Answer","text":"No. A no-match result describes only the searched data, names, and inputs. It is not a safety guarantee, legal conclusion, or comprehensive due-diligence result."}},{"@type":"Question","name":"Why is human review important for an OFAC search?","acceptedAnswer":{"@type":"Answer","text":"Similar names, aliases, transliterations, incomplete identifiers, and changing records can create ambiguous results that require contextual review."}}]}</script>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/">Forge Business Check</a><span>Evidence-first business screening</span></div></header>
+<main><div class="wrap article">
+<article>
+<div class="crumb"><a href="/">Home</a> / Guide</div>
+<p class="eyebrow">OFAC company-name screening guide</p>
+<h1>How to check whether a company appears on an OFAC sanctions list</h1>
+<p class="lead">Start with the company’s precise identity, search official OFAC data, and review any possible match before drawing a conclusion.</p>
+<div class="notice"><strong>Important limitation</strong>A name search is an initial evidence step. A possible match does not by itself prove that the intended company is sanctioned, and no match does not prove that a company is safe, legitimate, or legally compliant.</div>
+<h2>A careful four-step OFAC company check</h2>
+<ol class="steps">
+<li><h3>Identify the intended company</h3><p>Collect the legal name, known aliases, jurisdiction, address, website, and reliable registration or filing identifiers. A common or translated name can refer to more than one organization.</p></li>
+<li><h3>Search official OFAC data</h3><p>Use the <a href="https://ofac.treasury.gov/sanctions-list-search-tool">OFAC Sanctions List Search tool</a> and review the current <a href="https://ofac.treasury.gov/sanctions-list-service">Sanctions List Service</a>. Search the legal name and relevant aliases rather than relying on a third-party snippet.</p></li>
+<li><h3>Review a possible match</h3><p>Compare the returned name, aliases, addresses, programs, entity type, and available identifiers with the company you intend to check. OFAC describes its search as using fuzzy logic, so similarity alone is not confirmation.</p></li>
+<li><h3>Record the evidence and uncertainty</h3><p>Document the search date, names used, records reviewed, and unresolved differences. If identifiers do not support a responsible conclusion, preserve the result as unresolved or insufficient evidence.</p></li>
+</ol>
+<h2>What a possible OFAC match means</h2>
+<p>It means the searched name produced a result that deserves contextual review. It does not automatically establish that the result and the intended company are the same entity.</p>
+<ul>
+<li>Check aliases and spelling variations.</li>
+<li>Compare addresses, jurisdictions, and entity types.</li>
+<li>Review available identification numbers and program details.</li>
+<li>Escalate ambiguity instead of converting similarity into certainty.</li>
+</ul>
+<h2>What a no-match result cannot prove</h2>
+<ul>
+<li>That the company is safe, trustworthy, financially sound, or legally compliant.</li>
+<li>That every alias, owner, affiliate, or related party was searched.</li>
+<li>That other sanctions lists, ownership rules, licenses, or jurisdiction-specific records are clear.</li>
+<li>That comprehensive KYB or due diligence has been completed.</li>
+</ul>
+<h2>Why human review matters</h2>
+<p>Names, aliases, transliterations, addresses, ownership information, and source updates can make sanctions screening ambiguous. Human review helps determine whether evidence refers to the intended company and whether the available identifiers are sufficient.</p>
+<h2>How Forge Business Check fits</h2>
+<p>Forge Business Check is an early validation service using selected public SEC company records and OFAC sanctions data. Every early-access report is reviewed by a person before delivery. No payment is collected during validation.</p>
+<h2>Frequently asked questions</h2>
+<h3>Does an OFAC name match prove the company is sanctioned?</h3>
+<p>No. A possible name match requires identity and contextual review before it can be connected to the intended company.</p>
+<h3>Does no OFAC name match prove the company is safe?</h3>
+<p>No. It describes only the searched data, names, and inputs. It is not a safety guarantee, legal conclusion, or complete due-diligence result.</p>
+<h3>Should I also review SEC company records?</h3>
+<p>SEC records can add selected identity and filing evidence for covered filers, but they do not cover every company. See the <a href="/how-to-check-a-company-sec-ofac/">SEC and OFAC company-check guide</a>.</p>
+<h2>Official starting points</h2>
+<ul class="sources">
+<li><a href="https://ofac.treasury.gov/sanctions-list-search-tool">OFAC: Sanctions List Search Tool</a></li>
+<li><a href="https://ofac.treasury.gov/sanctions-list-service">OFAC: Sanctions List Service</a></li>
+<li><a href="https://ofac.treasury.gov/faqs/topic/1631">OFAC: Sanctions List Search FAQs</a></li>
+</ul>
+</article>
+<aside class="side"><div class="card">
+<h2>Have a real company decision?</h2>
+<p>Request an early Forge Business Check using selected SEC and OFAC public data.</p>
+<p><a class="button" href="https://tally.so/r/b5QkBe?source=ofac-company-sanctions-guide">Request Early Access</a></p>
+<p class="fine">Every report is reviewed by a person before delivery. No payment is collected during validation. Not legal, credit, compliance, comprehensive due-diligence, or full-KYB advice.</p>
+</div></aside>
+</div></main>
+<footer><div class="wrap">© 2026 Forge Business Check · <a href="/how-to-check-a-company-sec-ofac/">SEC &amp; OFAC guide</a> · <a href="/check-supplier-vendor-before-contract/">Supplier/vendor guide</a></div></footer>
+</body>
+</html>
