@@ -380,7 +380,7 @@
           </p>
 
           <div class="actions">
-            <a class="button" href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">Request an Early Business Check</a>
+          <a class="button" data-fbc-request href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">Request an Early Business Check</a>
             <a class="button secondary" href="#how-it-works">See how it works</a>
           </div>
 
@@ -499,7 +499,7 @@
           </p>
 
           <!-- Replace this mailto link once the company mailbox is configured. -->
-          <a class="button" href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">
+        <a class="button" data-fbc-request href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">
             Request Early Access
           </a>
         </div>
@@ -536,5 +536,21 @@
       © 2026 Forge Business Check · <a href="/how-to-check-a-company-sec-ofac/">SEC &amp; OFAC checking guide</a> · <a href="/check-supplier-vendor-before-contract/">Supplier/vendor decision guide</a>
     </div>
   </footer>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const rawSource = params.get('source') || params.get('utm_source') || 'homepage';
+      const source = rawSource
+        .trim()
+        .slice(0, 64)
+        .replace(/[^a-zA-Z0-9._-]/g, '-');
+
+      document.querySelectorAll('[data-fbc-request]').forEach((link) => {
+        const requestUrl = new URL(link.href);
+        requestUrl.searchParams.set('source', source || 'homepage');
+        link.href = requestUrl.toString();
+      });
+    })();
+  </script>
 </body>
 </html>
