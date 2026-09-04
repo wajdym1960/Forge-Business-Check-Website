@@ -540,15 +540,15 @@
   <script>
     (() => {
       const params = new URLSearchParams(window.location.search);
-      const rawSource = params.get('source') || params.get('utm_source') || 'homepage';
+      const rawSource = params.get('source') || params.get('utm_source') || ''; 
       const source = rawSource
         .trim()
         .slice(0, 64)
         .replace(/[^a-zA-Z0-9._-]/g, '-');
 
-      document.querySelectorAll('[data-fbc-request]').forEach((link) => {
+      document.querySelectorAll('[data-fbc-request]').forEach((link, index) => {
         const requestUrl = new URL(link.href);
-        requestUrl.searchParams.set('source', source || 'homepage');
+        requestUrl.searchParams.set('source', source || (index === 0 ? 'homepage_hero' : 'homepage_scope_cta'));
         link.href = requestUrl.toString();
       });
     })();
