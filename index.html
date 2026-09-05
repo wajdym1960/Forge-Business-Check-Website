@@ -12,10 +12,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://forgebusinesscheck.com/" />
   <meta property="og:title" content="Forge Business Check | Evidence-first business screening" />
-  <meta property="og:description" content="Check a company using SEC and OFAC evidence. Every early-access report is reviewed by a person before delivery." />
+  <meta property="og:description" content="Educational guidance for reviewing selected SEC and OFAC public records. Requests and intake are currently paused." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Forge Business Check | Evidence-first business screening" />
-  <meta name="twitter:description" content="Check a company using SEC and OFAC evidence. Every early-access report is reviewed by a person before delivery." />
+  <meta name="twitter:description" content="Educational guidance for reviewing selected SEC and OFAC public records. Requests and intake are currently paused." />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Forge Business Check","url":"https://forgebusinesscheck.com/","description":"Evidence-first business screening using selected SEC company records and OFAC sanctions data, with human review before delivery.","provider":{"@type":"Organization","name":"Forge AI Ventures"},"areaServed":"US"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Forge Business Check review?","acceptedAnswer":{"@type":"Answer","text":"Forge currently reviews selected authoritative public evidence, including SEC company records and OFAC sanctions data."}},{"@type":"Question","name":"Is every result reviewed by a person?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every early-access report requires human review before delivery."}},{"@type":"Question","name":"Does Forge replace legal, credit, compliance, or full KYB review?","acceptedAnswer":{"@type":"Answer","text":"No. Forge Business Check is an early-stage screening tool and does not replace legal advice, credit analysis, regulatory compliance review, or comprehensive KYB due diligence."}},{"@type":"Question","name":"Is payment required during early access?","acceptedAnswer":{"@type":"Answer","text":"No payment is collected during the current validation stage."}}]}]}
   </script>
@@ -380,12 +380,12 @@
           </p>
 
           <div class="actions">
-          <a class="button" data-fbc-request href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">Request an Early Business Check</a>
+          <span class="button" role="status" aria-disabled="true">Requests temporarily closed</span>
             <a class="button secondary" href="/illustrative-company-check-report/">Preview a fictional report</a>
           </div>
 
           <div class="microcopy">
-          Every early-access report is reviewed by a person before delivery. No payment is collected during validation.
+          Requests and intake are currently paused. This site remains available for informational and educational use.
         </div>
         </div>
 
@@ -488,32 +488,27 @@
       </div>
     </section>
 
-    <section id="early-access">
+    <section id="availability">
       <div class="wrap">
         <div class="cta">
-          <h2>Request an early business check</h2>
+          <h2>Business-check requests are temporarily closed</h2>
           <p>
-            Evaluating a vendor, customer, partner, or supplier for a real business decision? Request
-          an evidence-first check. Every report is reviewed by a person before delivery, and no payment
-          is collected during the current validation stage.
+            The public request form and intake mechanism are disabled. The informational guides and
+            fictional report preview remain available, but Forge Business Check is not accepting requests,
+            customer information, payments, or early-access submissions at this time.
           </p>
-
-          <!-- Replace this mailto link once the company mailbox is configured. -->
-        <a class="button" data-fbc-request href="https://tally.so/r/b5QkBe?source=homepage" target="_blank" rel="noopener">
-            Request Early Access
-          </a>
         </div>
       </div>
     </section>
 
     <section id="questions">
       <div class="wrap">
-        <div class="section-head"><h2>Questions before you request a check</h2><p>Clear scope for an early-stage business decision.</p></div>
+        <div class="section-head"><h2>About the informational scope</h2><p>Public requests and intake are currently paused.</p></div>
         <div class="outcomes">
           <div class="outcome"><strong>What is reviewed?</strong><p>Selected authoritative public evidence, including SEC company records and OFAC sanctions data.</p></div>
-          <div class="outcome"><strong>Is a person involved?</strong><p>Yes. Every early-access report requires human review before it can be delivered.</p></div>
+          <div class="outcome"><strong>Is this an automated clearance?</strong><p>No. The educational material does not provide a completed business check or clearance.</p></div>
           <div class="outcome"><strong>What does it replace?</strong><p>Nothing. It is an early-stage screen, not legal, credit, compliance, or comprehensive KYB advice.</p></div>
-          <div class="outcome"><strong>Is there a charge?</strong><p>No payment is collected during the current validation stage.</p></div>
+          <div class="outcome"><strong>Can I submit a request?</strong><p>No. The public request form and intake path are disabled.</p></div>
         </div>
       </div>
     </section>
@@ -534,24 +529,8 @@
   <footer>
     <div class="wrap">
       © 2026 Forge Business Check · <a href="/how-to-check-a-company-sec-ofac/">SEC &amp; OFAC checking guide</a> · <a href="/check-supplier-vendor-before-contract/">Supplier/vendor decision guide</a> · <a href="/check-company-ofac-sanctions-list/">OFAC sanctions-list guide</a>
-<br><a href="/check-company-sec-edgar/">SEC EDGAR guide</a> · <a href="/company-check-request-checklist/">Request checklist</a> · <a href="/first-wholesale-order-supplier-check/">First wholesale order worksheet</a> · <a href="/illustrative-company-check-report/">Illustrative report</a>
+<br><a href="/check-company-sec-edgar/">SEC EDGAR guide</a> · <a href="/company-check-request-checklist/">Company-check preparation checklist</a> · <a href="/first-wholesale-order-supplier-check/">First wholesale order worksheet</a> · <a href="/illustrative-company-check-report/">Illustrative report</a>
     </div>
   </footer>
-  <script>
-    (() => {
-      const params = new URLSearchParams(window.location.search);
-      const rawSource = params.get('source') || params.get('utm_source') || ''; 
-      const source = rawSource
-        .trim()
-        .slice(0, 64)
-        .replace(/[^a-zA-Z0-9._-]/g, '-');
-
-      document.querySelectorAll('[data-fbc-request]').forEach((link, index) => {
-        const requestUrl = new URL(link.href);
-        requestUrl.searchParams.set('source', source || (index === 0 ? 'homepage_hero' : 'homepage_scope_cta'));
-        link.href = requestUrl.toString();
-      });
-    })();
-  </script>
 </body>
 </html>
