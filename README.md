@@ -1,20 +1,30 @@
 # Forge Business Check
 
+
 Check a company before you do business.
 
-[Visit Forge Business Check](https://forgebusinesscheck.com/) | [Request an early business check](https://tally.so/r/b5QkBe?source=github-readme)
 
-Forge Business Check is an evidence-first early-stage business screening service. It reviews selected authoritative public evidence, including SEC company records and OFAC sanctions data, and turns the available evidence into a clear result: PROCEED, REVIEW, AVOID, or INSUFFICIENT EVIDENCE.
+[Visit the informational Forge Business Check website](https://forgebusinesscheck.com/)
 
-## Early-access safeguards
 
-- Every report requires human review before delivery.
-- No payment is collected during the current validation stage.
+Forge Business Check is an informational, evidence-first business-screening resource. It explains selected authoritative public evidence, including SEC company records and OFAC sanctions data, and the bounded decision vocabulary: PROCEED, REVIEW, AVOID, or INSUFFICIENT EVIDENCE.
+
+
+## Current status and safeguards
+
+
+- Public requests and intake are paused; the request form is disabled.
+- No requests, customer information, or payments are accepted.
+- Historical validation records and submissions are preserved outside this public repository.
 - A name match alone is never treated as a confirmed sanctions match.
 - The service does not replace legal advice, credit analysis, regulatory compliance review, or comprehensive KYB due diligence.
 
-## Who it is for
 
-People evaluating a vendor, customer, partner, or supplier for a real business decision can request a check through the early-access form.
+## Informational audience
+
+
+The public guides are available to people learning how selected SEC and OFAC records may inform a preliminary business decision. The site does not currently accept business-check requests.
+
 
 This repository hosts the public Forge Business Check landing page.
+
